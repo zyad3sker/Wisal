@@ -221,17 +221,15 @@ Quick response at any time.
 
 <h2>Contact Us</h2>
 <p>Book your appointment or send us a message.</p>
-<form>
+<form action="https://formspree.io/f/xzdngzao" method="POST">
 
-<input type="text" placeholder="Your Name">
+<input type="text" name="name" placeholder="Your Name" required>
 
-<input type="email" placeholder="Email">
+<input type="email" name="email" placeholder="Email" required>
 
-<input type="text" placeholder="Phone">
+<input type="text" name="phone" placeholder="Phone">
 
-<textarea
-placeholder="Write your message">
-</textarea>
+<textarea name="message" placeholder="Write your message"></textarea>
 
 <button>
 
