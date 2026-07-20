@@ -1,33 +1,45 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="ar" dir="rtl">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="Wisal Care Community - Professional home nursing care, elderly care, and medical follow-up services available 24/7.">
-    <title>Wisal Care Community</title>
+    <meta name="description" content="وصال للرعاية الصحية المنزلية - نوفر تمريض منزلي احترافي، رعاية كبار السن، جليسات مسنات، ومرور طبي منزلي على مدار الساعة 24/7.">
+    <title>وصال للرعاية المنزلية والتمريض المنزلي</title>
+    <!-- FontAwesome Icons -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css">
-    <link rel="stylesheet" href="./nurse.css">
+    <!-- Split CSS Compiled File -->
+    <link rel="stylesheet" href="./css/style.css">
 </head>
 <body>
 
-<!-- ================= NAVBAR ================= -->
+<!-- ==========================================================================
+     NAVBAR (الهيدر والنافبار)
+     ========================================================================== -->
 <header id="header">
     <nav>
-        <div class="logo">
+        <a href="#" class="logo">
             <i class="fa-solid fa-heart-pulse"></i>
-            <h2>Wisal</h2>
-        </div>
+            <h2>وصال</h2>
+        </a>
 
         <ul class="nav-links" id="nav-links">
-            <li><a href="#" class="active">Home</a></li>
-            <li><a href="#about">About</a></li>
-            <li><a href="#services">Services</a></li>
-            <li><a href="#why-us">Why Us</a></li>
-            <li><a href="#contact">Contact</a></li>
+            <li><a href="#" class="active">الرئيسية</a></li>
+            <li><a href="#about">من نحن</a></li>
+            <li><a href="#services">خدماتنا</a></li>
+            <li><a href="#why-us">لماذا نحن</a></li>
+            <li><a href="#team">طاقمنا</a></li>
+            <li><a href="#testimonials">آراء العملاء</a></li>
+            <li><a href="#faq">الأسئلة الشائعة</a></li>
+            <li><a href="#contact">تواصل معنا</a></li>
         </ul>
 
         <div class="nav-right">
-            <button class="book-btn" onclick="document.getElementById('contact').scrollIntoView({behavior:'smooth'})">Book Now</button>
+            <!-- Language Switcher -->
+            <button class="lang-switch" onclick="window.location.href='./index-en.html'">
+                <i class="fa-solid fa-globe"></i>
+                <span>English</span>
+            </button>
+            <button class="book-btn" onclick="document.getElementById('contact').scrollIntoView({behavior:'smooth'})">احجز الآن</button>
             <div class="hamburger" id="hamburger">
                 <span></span>
                 <span></span>
@@ -37,162 +49,434 @@
     </nav>
 </header>
 
-<!-- ================= HERO ================= -->
+<!-- ==========================================================================
+     HERO SECTION (واجهة البداية)
+     ========================================================================== -->
 <section class="hero">
     <div class="hero-overlay">
         <div class="hero-text">
-            <h1>Professional Home <span>Nursing Care</span></h1>
-            <p>We provide professional nurses, elderly care,<br>
-            medical follow-up and home healthcare services<br>24 hours a day.</p>
+            <h1>رعاية تمريضية منزلية <span>احترافية</span></h1>
+            <p>نوفر ممرضين وممرضات محترفين، رعاية كبار السن، المتابعة الطبية المنزلية والخدمات الصحية على مدار 24 ساعة لراحة أهلك في أمان بيتهم.</p>
             <div class="buttons">
                 <button class="btn1" onclick="document.getElementById('contact').scrollIntoView({behavior:'smooth'})">
-                    <i class="fa-solid fa-calendar-check"></i> Book Appointment
+                    <i class="fa-solid fa-calendar-check"></i> احجز موعداً الآن
                 </button>
                 <button class="btn2" onclick="document.getElementById('about').scrollIntoView({behavior:'smooth'})">
-                    Learn More <i class="fa-solid fa-arrow-right"></i>
+                    اكتشف المزيد <i class="fa-solid fa-arrow-left"></i>
                 </button>
             </div>
         </div>
     </div>
 </section>
 
-<!-- ================= ABOUT ================= -->
+<!-- ==========================================================================
+     ABOUT SECTION (عن الشركة)
+     ========================================================================== -->
 <section id="about" class="about">
     <div class="about-image reveal">
-        <img src="./img/tFx-KhAilJrNJD1cGnGdFwAbZsKAb8rjtskVbV6EomZc5nAIpCiWA5G-6uvdhgjhZjy23Blpyqgkq9o8GJXaNEtevzfDGAfsOKgZnXQZ93qeG8VlobmFA5ruehhHsmvQbsqc4K2mUr1YyQvxYz3chcpA-TrYgQQSXexReo0SDhFoOBASvXWwSKOg_LoPv8xk.jpg" alt="Professional nurse caring for patient">
+        <img src="./img/tFx-KhAilJrNJD1cGnGdFwAbZsKAb8rjtskVbV6EomZc5nAIpCiWA5G-6uvdhgjhZjy23Blpyqgkq9o8GJXaNEtevzfDGAfsOKgZnXQZ93qeG8VlobmFA5ruehhHsmvQbsqc4K2mUr1YyQvxYz3chcpA-TrYgQQSXexReo0SDhFoOBASvXWwSKOg_LoPv8xk.jpg" alt="طاقم تمريض وصال">
     </div>
     <div class="about-content reveal">
-        <h4>Who We Are</h4>
-        <h2>About Us</h2>
-        <p>We provide professional home healthcare services with highly qualified nurses and caregivers.
-        Our mission is to improve patients' quality of life through compassionate and personalized care.</p>
-        <button onclick="document.getElementById('contact').scrollIntoView({behavior:'smooth'})">Get In Touch</button>
+        <h4>من نحن</h4>
+        <h2>وصال للرعاية الصحية المنزلية</h2>
+        <p>نقدم خدمات الرعاية الصحية المنزلية الاحترافية من خلال طاقم تمريض ومقدمي رعاية مؤهلين تأهيلاً عالياً وبخبرات طويلة. رسالتنا الأساسية هي تحسين جودة حياة المرضى ودعم عائلاتهم من خلال تقديم رعاية صحية ونفسية حانية ومخصصة لكل حالة في منزلهم دون عناء المستشفيات.</p>
+        <button onclick="document.getElementById('contact').scrollIntoView({behavior:'smooth'})">تحدث معنا اليوم</button>
     </div>
 </section>
 
-<!-- ================= SERVICES ================= -->
+<!-- ==========================================================================
+     SERVICES SECTION (الخدمات)
+     ========================================================================== -->
 <section id="services" class="services">
-    <h2 class="reveal">Our Services</h2>
+    <div class="section-header reveal">
+        <h4>رعايتنا</h4>
+        <h2>خدماتنا الطبية والتمريضية</h2>
+    </div>
     <div class="service-container">
         <div class="service-card reveal">
             <i class="fa-solid fa-user-nurse"></i>
-            <h3>Nursing Care</h3>
-            <p>Professional nursing services at home, tailored to each patient's needs.</p>
+            <h3>التمريض المنزلي</h3>
+            <p>خدمات تمريضية شاملة تشمل العناية بالجروح، متابعة العلامات الحيوية، ورعاية ما بعد العمليات الجراحية.</p>
         </div>
         <div class="service-card reveal">
             <i class="fa-solid fa-syringe"></i>
-            <h3>Injections</h3>
-            <p>Safe and professional injection and IV administration at home.</p>
+            <h3>الحقن والمحاليل</h3>
+            <p>تركيب الكانيولا، إعطاء الحقن، والمحاليل الوريدية بالمنزل بأعلى درجات الأمان والتعقيم الطبي المعتمد.</p>
         </div>
         <div class="service-card reveal">
             <i class="fa-solid fa-wheelchair"></i>
-            <h3>Elderly Care</h3>
-            <p>Compassionate daily care and support for elderly patients.</p>
+            <h3>رعاية كبار السن</h3>
+            <p>مرافقة حانية وجليسات متخصصات للعناية بالأنشطة اليومية لكبار السن وتوفير الدعم النفسي والجسدي لهم.</p>
         </div>
         <div class="service-card reveal">
             <i class="fa-solid fa-truck-medical"></i>
-            <h3>Emergency Visit</h3>
-            <p>Quick response medical visits available at any time, day or night.</p>
+            <h3>المرور الطبي والزيارات الطارئة</h3>
+            <p>أطباء وممرضون جاهزون لزيارتكم في الحالات الطارئة ومتابعة الحالة الصحية للمريض بانتظام وتعديل العلاج.</p>
         </div>
     </div>
 </section>
 
-<!-- ================= WHY US ================= -->
+<!-- ==========================================================================
+     WHY US SECTION (لماذا نحن)
+     ========================================================================== -->
 <section id="why-us" class="why-us">
-    <h2 class="reveal">Why Choose Us?</h2>
+    <div class="section-header reveal">
+        <h4>ميزاتنا</h4>
+        <h2>لماذا يختار العملاء وصال؟</h2>
+    </div>
     <div class="why-container">
         <div class="why-card reveal">
             <i class="fa-solid fa-certificate"></i>
-            <h3>Certified Staff</h3>
-            <p>All our nurses and caregivers are fully certified and background-checked for your peace of mind.</p>
+            <h3>طاقم طبي مرخص ومعتمد</h3>
+            <p>جميع الممرضين والممرضات لدينا يمتلكون تراخيص مزاولة المهنة ويمرون باختبارات وتقييمات دقيقة لضمان الكفاءة والأمان.</p>
         </div>
         <div class="why-card reveal">
             <i class="fa-solid fa-clock"></i>
-            <h3>24/7 Availability</h3>
-            <p>We're always here when you need us — day or night, weekdays or weekends.</p>
+            <h3>متاحون 24/7 دون انقطاع</h3>
+            <p>نقدم خدماتنا على مدار الساعة ليل نهار، ونلبي طلباتكم في أيام العطلات والإجازات الرسمية فور حاجتكم إلينا.</p>
         </div>
         <div class="why-card reveal">
             <i class="fa-solid fa-shield-heart"></i>
-            <h3>Trusted & Safe</h3>
-            <p>Patient safety and comfort is our top priority in every single visit we make.</p>
+            <h3>ثقة وأمان وراحة تامة</h3>
+            <p>نهتم بالراحة النفسية للمريض بقدر اهتمامنا بحالته الجسدية، مع الالتزام التام بخصوصية وأمان منزلك وعائلتك.</p>
         </div>
     </div>
 </section>
 
-<!-- ================= STATISTICS ================= -->
+<!-- ==========================================================================
+     TEAM SECTION (طاقم العمل)
+     ========================================================================== -->
+<section id="team" class="team">
+    <div class="section-header reveal">
+        <h4>طاقمنا الطبي</h4>
+        <h2>نخبة من الأطباء والممرضين لخدمتك</h2>
+    </div>
+    <div class="team-container">
+        <div class="team-card reveal">
+            <div class="team-img-box">
+                <i class="fa-solid fa-user-doctor"></i>
+            </div>
+            <div class="team-info">
+                <h3>د. أحمد كمال</h3>
+                <p class="specialty">طبيب استشاري ورئيس المرور الطبي</p>
+                <p>خبرة 12 عاماً في الرعاية المنزلية، متخصص في وضع وتنسيق الخطط العلاجية المتكاملة للمرضى بالمنزل.</p>
+            </div>
+        </div>
+        <div class="team-card reveal">
+            <div class="team-img-box">
+                <i class="fa-solid fa-user-nurse"></i>
+            </div>
+            <div class="team-info">
+                <h3>أ. فاطمة علي</h3>
+                <p class="specialty">أخصائية تمريض ورعاية حرجة</p>
+                <p>متخصصة في العناية بالجروح المزمنة، تركيب القساطر والمحاليل الوريدية، ومتابعة الحالات الحساسة.</p>
+            </div>
+        </div>
+        <div class="team-card reveal">
+            <div class="team-img-box">
+                <i class="fa-solid fa-users"></i>
+            </div>
+            <div class="team-info">
+                <h3>أ. ياسمين ممدوح</h3>
+                <p class="specialty">مشرفة رعاية وجليسات كبار السن</p>
+                <p>خبرة واسعة في الدعم النفسي والسلوكي لكبار السن ومرافقة مرضى الزهايمر وتدريب الجليسات.</p>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- ==========================================================================
+     TESTIMONIALS SECTION (آراء العملاء)
+     ========================================================================== -->
+<section id="testimonials" class="testimonials">
+    <div class="section-header reveal">
+        <h4>آراء عملائنا</h4>
+        <h2>عائلات وضعت ثقتها الغالية في وصال</h2>
+    </div>
+    <div class="testimonial-container">
+        <div class="testimonial-card reveal">
+            <i class="fa-solid fa-quote-left quote-icon"></i>
+            <div class="stars">
+                <i class="fa-solid fa-star"></i>
+                <i class="fa-solid fa-star"></i>
+                <i class="fa-solid fa-star"></i>
+                <i class="fa-solid fa-star"></i>
+                <i class="fa-solid fa-star"></i>
+            </div>
+            <p>"تجربتنا مع وصال كانت ممتازة جداً. الجليسة التي رافقت والدي المصاب بالزهايمر كانت في قمة الأمانة والرفق والأخلاق النبيلة. شالت عنا عبء كبير."</p>
+            <div class="client-info">
+                <div class="client-avatar">م ر</div>
+                <div class="client-details">
+                    <h4>أ. محمد رأفت</h4>
+                    <span>نجل مريض كبار سن</span>
+                </div>
+            </div>
+        </div>
+        <div class="testimonial-card reveal">
+            <i class="fa-solid fa-quote-left quote-icon"></i>
+            <div class="stars">
+                <i class="fa-solid fa-star"></i>
+                <i class="fa-solid fa-star"></i>
+                <i class="fa-solid fa-star"></i>
+                <i class="fa-solid fa-star"></i>
+                <i class="fa-solid fa-star"></i>
+            </div>
+            <p>"طاقم التمريض أنقذنا في وقت حرج لتركيب محاليل لوالدتي في وقت متأخر من الليل. سرعة فائقة في الحضور واحترافية عالية وهدوء بث فينا الطمأنينة."</p>
+            <div class="client-info">
+                <div class="client-avatar">س ح</div>
+                <div class="client-details">
+                    <h4>م. سارة حسن</h4>
+                    <span>ابنة مريضة</span>
+                </div>
+            </div>
+        </div>
+        <div class="testimonial-card reveal">
+            <i class="fa-solid fa-quote-left quote-icon"></i>
+            <div class="stars">
+                <i class="fa-solid fa-star"></i>
+                <i class="fa-solid fa-star"></i>
+                <i class="fa-solid fa-star"></i>
+                <i class="fa-solid fa-star"></i>
+                <i class="fa-solid fa-star"></i>
+            </div>
+            <p>"المرور الطبي الدوري للأطباء ساعدنا كثيراً في ضبط جرعات العلاج لجدتي ومتابعة حالتها الصحية بانتظام دون الاضطرار لنقلها للمستشفى والتعرض للعدوى."</p>
+            <div class="client-info">
+                <div class="client-avatar">ع ش</div>
+                <div class="client-details">
+                    <h4>أ. عمر الشريف</h4>
+                    <span>حفيد مريضة</span>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- ==========================================================================
+     STATISTICS SECTION (إحصائيات)
+     ========================================================================== -->
 <section class="stats">
     <div class="stat-box reveal">
         <h2>500+</h2>
-        <p>Patients</p>
+        <p>مريض تمت خدمتهم بنجاح</p>
     </div>
     <div class="stat-box reveal">
         <h2>40+</h2>
-        <p>Nurses</p>
+        <p>ممرض وممرضة مرخصين</p>
     </div>
     <div class="stat-box reveal">
         <h2>15+</h2>
-        <p>Years Experience</p>
+        <p>سنوات خبرة في الرعاية</p>
     </div>
     <div class="stat-box reveal">
         <h2>24/7</h2>
-        <p>Support</p>
+        <p>دعم واستشارات طبية</p>
     </div>
 </section>
 
-<!-- ================= CONTACT ================= -->
-<section id="contact" class="contact">
-    <h2 class="reveal">Contact Us</h2>
-    <p class="reveal">Book your appointment or send us a message.</p>
-    <form action="https://formspree.io/f/xzdngzao" method="POST" class="reveal">
-        <input type="text" name="name" placeholder="Your Name" required>
-        <input type="email" name="email" placeholder="Email" required>
-        <input type="text" name="phone" placeholder="Phone">
-        <textarea name="message" placeholder="Write your message" rows="5"></textarea>
-        <button type="submit">
-            <i class="fa-solid fa-paper-plane"></i> Send Message
-        </button>
-    </form>
+<!-- ==========================================================================
+     FAQ SECTION (الأسئلة الشائعة)
+     ========================================================================== -->
+<section id="faq" class="faq">
+    <div class="section-header reveal">
+        <h4>الإجابات</h4>
+        <h2>الأسئلة الشائعة للعملاء</h2>
+    </div>
+    <div class="faq-container">
+        <div class="faq-item reveal">
+            <div class="faq-header">
+                <h3>ما هي مؤهلات طاقم التمريض والجليسات لديكم؟</h3>
+                <div class="faq-icon"><i class="fa-solid fa-chevron-down"></i></div>
+            </div>
+            <div class="faq-body">
+                <div class="faq-content">
+                    جميع أفراد طاقمنا التمريضي حاصلون على شهادات معتمدة في التمريض وتراخيص مزاولة المهنة الرسمية. أما جليسات كبار السن فيتم اختيارهن بعناية فائقة وتدريبهن على الدعم النفسي والجسدي، ومرافقة مرضى الزهايمر وشلل الرعاش بدقة وأمان.
+                </div>
+            </div>
+        </div>
+        <div class="faq-item reveal">
+            <div class="faq-header">
+                <h3>هل تتوفر لديكم خدمة الإقامة الكاملة لكبار السن؟</h3>
+                <div class="faq-icon"><i class="fa-solid fa-chevron-down"></i></div>
+            </div>
+            <div class="faq-body">
+                <div class="faq-content">
+                    نعم، نوفر خدمات رعاية وإقامة كاملة (24 ساعة) إما عن طريق ممرض متواجد بشكل مستمر أو جليسة مقيمة، أو من خلال شفتات تمريضية متناوبة (مثال: شفت كل 12 ساعة) لضمان عدم ترك المريض بمفرده نهائياً.
+                </div>
+            </div>
+        </div>
+        <div class="faq-item reveal">
+            <div class="faq-header">
+                <h3>كيف يتم تحديد سعر الخدمة؟</h3>
+                <div class="faq-icon"><i class="fa-solid fa-chevron-down"></i></div>
+            </div>
+            <div class="faq-body">
+                <div class="faq-content">
+                    يتم تحديد التكلفة بناءً على الحالة الصحية للمريض ونوع الخدمة المطلوبة (تمريض علاجي مكثف أم رعاية يومية ومرافقة) وعدد الساعات المطلوبة (زيارة سريعة، شفت 12 ساعة، أم إقامة كاملة). نوفر عروضاً وأسعاراً مرنة وباقات شهرية موفرة.
+                </div>
+            </div>
+        </div>
+        <div class="faq-item reveal">
+            <div class="faq-header">
+                <h3>كيف يمكنني حجز موعد أو الاستفسار؟</h3>
+                <div class="faq-icon"><i class="fa-solid fa-chevron-down"></i></div>
+            </div>
+            <div class="faq-body">
+                <div class="faq-content">
+                    يمكنك طلب الخدمة بسهولة بملء نموذج الحجز أسفل الصفحة، أو عن طريق الاتصال الهاتفي المباشر بنا، أو عبر محادثة واتساب الفورية بالضغط على زر الواتساب أسفل الشاشة للتواصل مباشرة مع مشرف الخدمة وتنسيق الزيارة.
+                </div>
+            </div>
+        </div>
+    </div>
 </section>
 
-<!-- ================= FOOTER ================= -->
+<!-- ==========================================================================
+     CONTACT SECTION (التواصل والحجز التفاعلي)
+     ========================================================================== -->
+<section id="contact" class="contact">
+    <div class="section-header reveal">
+        <h4>احجز موعداً</h4>
+        <h2>طلب رعاية منزلية فورية</h2>
+    </div>
+    
+    <div class="booking-form-box reveal">
+        <form id="bookingForm" action="https://formspree.io/f/xzdngzao" method="POST">
+            <!-- Name & Email -->
+            <div class="form-group-grid">
+                <div class="form-group">
+                    <label for="name">الاسم بالكامل *</label>
+                    <input type="text" id="name" name="name" class="form-input" placeholder="اسمك الكريم" required>
+                </div>
+                <div class="form-group">
+                    <label for="phone">رقم الهاتف *</label>
+                    <input type="tel" id="phone" name="phone" class="form-input" placeholder="رقم هاتفك للتواصل" required>
+                </div>
+            </div>
+            
+            <div class="form-group">
+                <label for="email">البريد الإلكتروني</label>
+                <input type="email" id="email" name="email" class="form-input" placeholder="عنوان بريدك الإلكتروني">
+            </div>
+
+            <!-- Service Radio Selection Grid -->
+            <div class="form-group">
+                <label>نوع الخدمة المطلوبة *</label>
+                <div class="radio-grid">
+                    <label class="radio-card">
+                        <input type="radio" name="service_type" value="Nursing" checked>
+                        <i class="fa-solid fa-user-nurse"></i>
+                        <span>تمريض منزلي</span>
+                    </label>
+                    <label class="radio-card">
+                        <input type="radio" name="service_type" value="Elderly Care">
+                        <i class="fa-solid fa-wheelchair"></i>
+                        <span>رعاية كبار سن</span>
+                    </label>
+                    <label class="radio-card">
+                        <input type="radio" name="service_type" value="Medical Visit">
+                        <i class="fa-solid fa-user-doctor"></i>
+                        <span>مرور طبي</span>
+                    </label>
+                    <label class="radio-card">
+                        <input type="radio" name="service_type" value="Injections/IV">
+                        <i class="fa-solid fa-syringe"></i>
+                        <span>حقن ومحاليل</span>
+                    </label>
+                </div>
+            </div>
+
+            <!-- Duration Selection Grid -->
+            <div class="form-group">
+                <label>مدة الخدمة / الشفت *</label>
+                <div class="radio-grid">
+                    <label class="radio-card">
+                        <input type="radio" name="duration" value="Quick Visit" checked>
+                        <i class="fa-solid fa-bolt"></i>
+                        <span>زيارة سريعة</span>
+                    </label>
+                    <label class="radio-card">
+                        <input type="radio" name="duration" value="12 Hours Shift">
+                        <i class="fa-solid fa-business-time"></i>
+                        <span>شفت 12 ساعة</span>
+                    </label>
+                    <label class="radio-card">
+                        <input type="radio" name="duration" value="24 Hours Care">
+                        <i class="fa-solid fa-house-chimney-medical"></i>
+                        <span>إقامة 24 ساعة</span>
+                    </label>
+                </div>
+            </div>
+
+            <!-- Patient Details Textarea -->
+            <div class="form-group">
+                <label for="message">تفاصيل حالة المريض والاحتياجات</label>
+                <textarea id="message" name="message" class="form-textarea" placeholder="يرجى كتابة عمر المريض، حالته الصحية، وما يحتاجه بالتحديد لمساعدتنا في اختيار الطاقم الأنسب..."></textarea>
+            </div>
+
+            <!-- Submit Button -->
+            <button type="submit" class="submit-btn">
+                <i class="fa-solid fa-paper-plane"></i>
+                <span>إرسال طلب الحجز</span>
+            </button>
+        </form>
+    </div>
+</section>
+
+<!-- ==========================================================================
+     FOOTER (الفوتر المحسن)
+     ========================================================================== -->
 <footer>
     <div class="footer-container">
         <div class="footer-brand">
             <div class="logo">
                 <i class="fa-solid fa-heart-pulse"></i>
-                <h2>Wisal</h2>
+                <h2>وصال</h2>
             </div>
-            <p>Providing compassionate home healthcare services to improve lives, one patient at a time.</p>
+            <p>نحن شريكك الموثوق لتقديم رعاية صحية منزلية متكاملة تضمن الأمان للمريض والطمأنينة لعائلته، بأعلى معايير الجودة الطبية والرحمة الإنسانية.</p>
         </div>
         <div class="footer-links">
-            <h4>Quick Links</h4>
+            <h4>روابط سريعة</h4>
             <ul>
-                <li><a href="#">Home</a></li>
-                <li><a href="#about">About</a></li>
-                <li><a href="#services">Services</a></li>
-                <li><a href="#contact">Contact</a></li>
+                <li><a href="#">الرئيسية</a></li>
+                <li><a href="#about">من نحن</a></li>
+                <li><a href="#services">خدماتنا</a></li>
+                <li><a href="#contact">حجز موعد</a></li>
             </ul>
         </div>
         <div class="footer-social">
-            <h4>Follow Us</h4>
+            <h4>تابعنا على</h4>
             <div class="social-icons">
-                <a href="#" aria-label="Facebook"><i class="fa-brands fa-facebook"></i></a>
-                <a href="#" aria-label="Instagram"><i class="fa-brands fa-instagram"></i></a>
-                <a href="#" aria-label="WhatsApp"><i class="fa-brands fa-whatsapp"></i></a>
-                <a href="#" aria-label="Twitter"><i class="fa-brands fa-x-twitter"></i></a>
+                <a href="#" aria-label="فيسبوك"><i class="fa-brands fa-facebook-f"></i></a>
+                <a href="#" aria-label="إنستغرام"><i class="fa-brands fa-instagram"></i></a>
+                <a href="#" aria-label="تويتر"><i class="fa-brands fa-x-twitter"></i></a>
             </div>
         </div>
     </div>
     <div class="footer-bottom">
-        <p>© 2026 Wisal Care Nursing. All Rights Reserved.</p>
+        <p>© 2026 وصال للرعاية الصحية والتمريض المنزلي. جميع الحقوق محفوظة.</p>
     </div>
 </footer>
 
+<!-- ==========================================================================
+     FLOATING WIDGETS (أزرار الاتصال والواتساب العائمة)
+     ========================================================================== -->
+<div class="floating-widgets">
+    <!-- WhatsApp Widget -->
+    <a href="https://wa.me/201000000000?text=%D9%85%D8%B1%D8%AD%D8%A8%D8%A7%D9%8B%20%D9%88%D8%B5%D8%A7%D9%84%D8%8C%20%D8%A3%D9%88%D8%AF%20%D8%A7%D9%84%D8%A7%D8%B3%D8%AA%D9%81%D8%B3%D8%A7%D8%B1%20%D8%B9%D9%86%20%D8%AE%D8%AF%D9%85%D8%A7%D8%AA%20%D8%A7%D9%84%D8%B1%D8%B9%D8%A7%D9%8A%D8%A9%20%D8%A7%D9%84%D9%85%D9%86%D8%B2%D9%84%D9%8A%D8%A9." 
+       class="floating-btn whatsapp" target="_blank" aria-label="تواصل معنا عبر واتساب">
+        <i class="fa-brands fa-whatsapp"></i>
+    </a>
+    <!-- Phone Call Widget -->
+    <a href="tel:+201000000000" class="floating-btn call" aria-label="اتصل بنا هاتفياً">
+        <i class="fa-solid fa-phone"></i>
+    </a>
+</div>
+
 <!-- Scroll to Top Button -->
-<button class="scroll-top" id="scrollTop" aria-label="Scroll to top">
+<button class="scroll-top" id="scrollTop" aria-label="رجوع للأعلى">
     <i class="fa-solid fa-arrow-up"></i>
 </button>
 
-<script src="./script.js"></script>
+<!-- Main App Script Module -->
+<script type="module" src="./js/app.js"></script>
 </body>
 </html>
