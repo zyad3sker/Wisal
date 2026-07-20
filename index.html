@@ -3,262 +3,196 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
+    <meta name="description" content="Wisal Care Community - Professional home nursing care, elderly care, and medical follow-up services available 24/7.">
     <title>Wisal Care Community</title>
-
-    <link rel="stylesheet"
-    href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css">
-
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css">
     <link rel="stylesheet" href="./nurse.css">
 </head>
-<link rel="stylesheet" href="./nurse.css">
 <body>
-<!-- Navbar --><!-- ================= NAVBAR ================= -->
-<div class="zy">
-<header>
 
+<!-- ================= NAVBAR ================= -->
+<header id="header">
     <nav>
-
         <div class="logo">
             <i class="fa-solid fa-heart-pulse"></i>
-            <h2>Wisal </h2>
+            <h2>Wisal</h2>
         </div>
 
-        <ul>
-
-            <li><a href="#">Home</a></li>
-
+        <ul class="nav-links" id="nav-links">
+            <li><a href="#" class="active">Home</a></li>
             <li><a href="#about">About</a></li>
-
             <li><a href="#services">Services</a></li>
-
+            <li><a href="#why-us">Why Us</a></li>
             <li><a href="#contact">Contact</a></li>
-
         </ul>
 
-        <button>Book Now</button>
-
+        <div class="nav-right">
+            <button class="book-btn" onclick="document.getElementById('contact').scrollIntoView({behavior:'smooth'})">Book Now</button>
+            <div class="hamburger" id="hamburger">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+        </div>
     </nav>
-
 </header>
 
 <!-- ================= HERO ================= -->
-
 <section class="hero">
-
-<div class="overlay">
-
-<div class="hero-text">
-
-<h1>
-Professional Home Nursing Care
-</h1>
-
-<p>
-
-We provide professional nurses, elderly care,
-medical follow-up and home healthcare services
-24 hours a day.
-
-</p>
-
-<div class="buttons">
-
-<button class="btn1">
-Book Appointment
-</button>
-
-<button class="btn2">
-Learn More
-</button>
-
-</div>
-
-</div>
-
-</div>
-
+    <div class="hero-overlay">
+        <div class="hero-text">
+            <h1>Professional Home <span>Nursing Care</span></h1>
+            <p>We provide professional nurses, elderly care,<br>
+            medical follow-up and home healthcare services<br>24 hours a day.</p>
+            <div class="buttons">
+                <button class="btn1" onclick="document.getElementById('contact').scrollIntoView({behavior:'smooth'})">
+                    <i class="fa-solid fa-calendar-check"></i> Book Appointment
+                </button>
+                <button class="btn2" onclick="document.getElementById('about').scrollIntoView({behavior:'smooth'})">
+                    Learn More <i class="fa-solid fa-arrow-right"></i>
+                </button>
+            </div>
+        </div>
+    </div>
 </section>
 
-
 <!-- ================= ABOUT ================= -->
-
 <section id="about" class="about">
-
-<div class="about-img">
-
-<img src="./img/tFx-KhAilJrNJD1cGnGdFwAbZsKAb8rjtskVbV6EomZc5nAIpCiWA5G-6uvdhgjhZjy23Blpyqgkq9o8GJXaNEtevzfDGAfsOKgZnXQZ93qeG8VlobmFA5ruehhHsmvQbsqc4K2mUr1YyQvxYz3chcpA-TrYgQQSXexReo0SDhFoOBASvXWwSKOg_LoPv8xk.jpg">
-
-</div>
-
-<div class="about-text">
-
-<h2>About Us</h2>
-
-<p>
-
-We provide professional home healthcare services
-with highly qualified nurses and caregivers.
-
-Our mission is to improve patients' quality of life
-through compassionate and personalized care.
-
-</p>
-
-</div>
-
+    <div class="about-image reveal">
+        <img src="./img/tFx-KhAilJrNJD1cGnGdFwAbZsKAb8rjtskVbV6EomZc5nAIpCiWA5G-6uvdhgjhZjy23Blpyqgkq9o8GJXaNEtevzfDGAfsOKgZnXQZ93qeG8VlobmFA5ruehhHsmvQbsqc4K2mUr1YyQvxYz3chcpA-TrYgQQSXexReo0SDhFoOBASvXWwSKOg_LoPv8xk.jpg" alt="Professional nurse caring for patient">
+    </div>
+    <div class="about-content reveal">
+        <h4>Who We Are</h4>
+        <h2>About Us</h2>
+        <p>We provide professional home healthcare services with highly qualified nurses and caregivers.
+        Our mission is to improve patients' quality of life through compassionate and personalized care.</p>
+        <button onclick="document.getElementById('contact').scrollIntoView({behavior:'smooth'})">Get In Touch</button>
+    </div>
 </section>
 
 <!-- ================= SERVICES ================= -->
-
 <section id="services" class="services">
+    <h2 class="reveal">Our Services</h2>
+    <div class="service-container">
+        <div class="service-card reveal">
+            <i class="fa-solid fa-user-nurse"></i>
+            <h3>Nursing Care</h3>
+            <p>Professional nursing services at home, tailored to each patient's needs.</p>
+        </div>
+        <div class="service-card reveal">
+            <i class="fa-solid fa-syringe"></i>
+            <h3>Injections</h3>
+            <p>Safe and professional injection and IV administration at home.</p>
+        </div>
+        <div class="service-card reveal">
+            <i class="fa-solid fa-wheelchair"></i>
+            <h3>Elderly Care</h3>
+            <p>Compassionate daily care and support for elderly patients.</p>
+        </div>
+        <div class="service-card reveal">
+            <i class="fa-solid fa-truck-medical"></i>
+            <h3>Emergency Visit</h3>
+            <p>Quick response medical visits available at any time, day or night.</p>
+        </div>
+    </div>
+</section>
 
-<h2>Our Services</h2>
-
-<div class="cards">
-
-<div class="card">
-
-<i class="fa-solid fa-user-nurse"></i>
-
-<h3>Nursing Care</h3>
-
-<p>
-
-Professional nursing services at home.
-
-</p>
-
-</div>
-
-<div class="card">
-
-<i class="fa-solid fa-syringe"></i>
-
-<h3>Injections</h3>
-
-<p>
-
-Injection and IV administration.
-
-</p>
-
-</div>
-
-<div class="card">
-
-<i class="fa-solid fa-wheelchair"></i>
-
-<h3>Elderly Care</h3>
-
-<p>
-
-Daily care for elderly patients.
-
-</p>
-
-</div>
-
-<div class="card">
-
-<i class="fa-solid fa-truck-medical"></i>
-
-<h3>Emergency Visit</h3>
-
-<p>
-
-Quick response at any time.
-
-</p>
-
-</div>
-
-</div>
-
+<!-- ================= WHY US ================= -->
+<section id="why-us" class="why-us">
+    <h2 class="reveal">Why Choose Us?</h2>
+    <div class="why-container">
+        <div class="why-card reveal">
+            <i class="fa-solid fa-certificate"></i>
+            <h3>Certified Staff</h3>
+            <p>All our nurses and caregivers are fully certified and background-checked for your peace of mind.</p>
+        </div>
+        <div class="why-card reveal">
+            <i class="fa-solid fa-clock"></i>
+            <h3>24/7 Availability</h3>
+            <p>We're always here when you need us — day or night, weekdays or weekends.</p>
+        </div>
+        <div class="why-card reveal">
+            <i class="fa-solid fa-shield-heart"></i>
+            <h3>Trusted & Safe</h3>
+            <p>Patient safety and comfort is our top priority in every single visit we make.</p>
+        </div>
+    </div>
 </section>
 
 <!-- ================= STATISTICS ================= -->
-
 <section class="stats">
-
-<div>
-
-<h2>500+</h2>
-
-<p>Patients</p>
-
-</div>
-
-<div>
-
-<h2>40+</h2>
-
-<p>Nurses</p>
-
-</div>
-
-<div>
-
-<h2>15+</h2>
-
-<p>Years Experience</p>
-
-</div>
-
-<div>
-
-<h2>24/7</h2>
-
-<p>Support</p>
-
-</div>
-
+    <div class="stat-box reveal">
+        <h2>500+</h2>
+        <p>Patients</p>
+    </div>
+    <div class="stat-box reveal">
+        <h2>40+</h2>
+        <p>Nurses</p>
+    </div>
+    <div class="stat-box reveal">
+        <h2>15+</h2>
+        <p>Years Experience</p>
+    </div>
+    <div class="stat-box reveal">
+        <h2>24/7</h2>
+        <p>Support</p>
+    </div>
 </section>
 
 <!-- ================= CONTACT ================= -->
-
 <section id="contact" class="contact">
-
-<h2>Contact Us</h2>
-<p>Book your appointment or send us a message.</p>
-<form action="https://formspree.io/f/xzdngzao" method="POST">
-
-<input type="text" name="name" placeholder="Your Name" required>
-
-<input type="email" name="email" placeholder="Email" required>
-
-<input type="text" name="phone" placeholder="Phone">
-
-<textarea name="message" placeholder="Write your message"></textarea>
-
-<button>
-
-Send Message
-
-</button>
-
-</form>
-
+    <h2 class="reveal">Contact Us</h2>
+    <p class="reveal">Book your appointment or send us a message.</p>
+    <form action="https://formspree.io/f/xzdngzao" method="POST" class="reveal">
+        <input type="text" name="name" placeholder="Your Name" required>
+        <input type="email" name="email" placeholder="Email" required>
+        <input type="text" name="phone" placeholder="Phone">
+        <textarea name="message" placeholder="Write your message" rows="5"></textarea>
+        <button type="submit">
+            <i class="fa-solid fa-paper-plane"></i> Send Message
+        </button>
+    </form>
 </section>
 
 <!-- ================= FOOTER ================= -->
-
 <footer>
-
-<h2>Wisal Care Nursing</h2>
-
-<p>
-
-© 2026 All Rights Reserved
-
-</p>
-
-
+    <div class="footer-container">
+        <div class="footer-brand">
+            <div class="logo">
+                <i class="fa-solid fa-heart-pulse"></i>
+                <h2>Wisal</h2>
+            </div>
+            <p>Providing compassionate home healthcare services to improve lives, one patient at a time.</p>
+        </div>
+        <div class="footer-links">
+            <h4>Quick Links</h4>
+            <ul>
+                <li><a href="#">Home</a></li>
+                <li><a href="#about">About</a></li>
+                <li><a href="#services">Services</a></li>
+                <li><a href="#contact">Contact</a></li>
+            </ul>
+        </div>
+        <div class="footer-social">
+            <h4>Follow Us</h4>
+            <div class="social-icons">
+                <a href="#" aria-label="Facebook"><i class="fa-brands fa-facebook"></i></a>
+                <a href="#" aria-label="Instagram"><i class="fa-brands fa-instagram"></i></a>
+                <a href="#" aria-label="WhatsApp"><i class="fa-brands fa-whatsapp"></i></a>
+                <a href="#" aria-label="Twitter"><i class="fa-brands fa-x-twitter"></i></a>
+            </div>
+        </div>
+    </div>
+    <div class="footer-bottom">
+        <p>© 2026 Wisal Care Nursing. All Rights Reserved.</p>
+    </div>
 </footer>
 
-</body>
-</html>
-</body>
-</html>
+<!-- Scroll to Top Button -->
+<button class="scroll-top" id="scrollTop" aria-label="Scroll to top">
+    <i class="fa-solid fa-arrow-up"></i>
+</button>
+
+<script src="./script.js"></script>
 </body>
 </html>
